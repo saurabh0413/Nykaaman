@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
 
 module.exports = () => {
-  return mongoose.connect("mongodb://127.0.0.1:27017/TEST");
+  return mongoose.connect("mongodb+srv://saurabh:saurabh@cluster0.dgf0v.mongodb.net/myFirstDatabase?retryWrites=true&w=majority");
 };
