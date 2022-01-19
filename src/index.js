@@ -12,5 +12,4 @@ app.use(express.static("public"));
 app.use("", indexController);
 app.use("", productController);
 
-
 module.exports = app;
