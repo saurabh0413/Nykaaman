@@ -1,5 +1,5 @@
 document.getElementById("GoToLogin").addEventListener("click",()=>{
-    window.location.href="account.html"
+    window.location.href="/users"
 })
 // document.getElementById("imgSetter").addEventListener("click",()=>{
 //   console.log("yes")
