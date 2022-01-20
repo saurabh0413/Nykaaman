@@ -1698,9 +1698,11 @@ containerP.innerHTML = null;
    p_heading.style.color = "#003243";
 
    let img = document.createElement("img")
+
    prod_div.addEventListener("click",()=>{
     localStorage.setItem("bagdata",JSON.stringify(item))
     window.location.href= "/unqProduct"
+
    })
    img.setAttribute("src", item.images[0]);
    img.style.height = "250px";
@@ -1776,6 +1778,8 @@ containerP.innerHTML = null;
       var a= JSON.parse(localStorage.getItem("bagdata")) || []
       a.push(item)
       localStorage.setItem("bagdata",JSON.stringify(a))
+
+
 
       // hide();
       
