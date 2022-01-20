@@ -1338,7 +1338,7 @@ border-radius: 5px;
     let unq_detailsDiv = document.getElementById("unq_detailsDiv");
 
 
-    let unq_product = JSON.parse(localStorage.getItem("product"));
+    let unq_product = JSON.parse(localStorage.getItem("bagdata"));
     // console.log(unq_product);
 
     displayUnqProduct(unq_product);
@@ -1415,7 +1415,7 @@ border-radius: 5px;
         unq_star_ratingP.style.marginLeft = "5px";
         unq_star_ratingP.style.paddingRight = "10px";
         unq_star_ratingP.style.borderRight = "1px solid lightgray";
-        unq_star_ratingP.innerHTML = `${item.ratings}/5`;
+        unq_star_ratingP.innerHTML = `${item.ratings.$numberDouble}/5`;
 
         let dkNum = Math.round(Math.random()*50);
         let dkNum2 = Math.round(Math.random()*500);
@@ -1437,7 +1437,7 @@ border-radius: 5px;
 
         unq_p_ratingDiv.append(unq_star_rating1,unq_star_rating2,unq_star_rating3,unq_star_rating4,unq_star_rating5,unq_star_ratingP,unq_rating_reviewsP,unq_rating_Qna)
 
-        let unq_show = Math.floor(Number(item.ratings));
+        let unq_show = Math.floor(Number(item.ratings.$numberDouble));
 
         let unq_star_spans = unq_p_ratingDiv.childNodes;
         for(let i = 0; i < unq_show; i++) {
@@ -1459,14 +1459,14 @@ border-radius: 5px;
        let unq_p_old_price = document.createElement("h4");
        unq_p_old_price.setAttribute("class", "unq_productTexts");
        unq_p_old_price.style.textDecoration = "line-through";
-        unq_p_old_price.innerText = `₹${item.oldPrice}`;
+        unq_p_old_price.innerText = `₹${item.oldPrice.$numberInt}`;
         unq_p_old_price.style.color = "silver";
         unq_p_old_price.style.marginTop = "0px";
        
 
        let unq_p_new_price = document.createElement("h4");
        unq_p_new_price.setAttribute("class", "unq_productTexts");
-        unq_p_new_price.innerText = `₹${item.newprice} |`;
+        unq_p_new_price.innerText = `₹${item.newprice.$numberInt} |`;
         
 
 
