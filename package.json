@@ -20,6 +20,16 @@
   "dependencies": {
     "ejs": "^3.1.6",
     "express": "^4.17.2",
+<<<<<<< Updated upstream
     "mongoose": "^6.1.7"
+=======
+
+    "method-override": "^3.0.0",
+
+    "mongoose": "^6.1.7",
+
+    "node-localstorage": "^2.2.1"
+
+>>>>>>> Stashed changes
   }
 }
