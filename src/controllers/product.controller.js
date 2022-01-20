@@ -25,6 +25,15 @@ router.get("/products",async(req,res)=>{
     }
 })
 
+router.get("/unqProduct",async(req,res)=>{
+    try{
+      
+        res.render("unqProduct")
+    }
+    catch(err){
+        res.status(500).send(err.message)
+    }
+})
 
 
 
