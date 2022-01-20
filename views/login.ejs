@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/336aa36eed.js" crossorigin="anonymous"></script>
+    <title>Login/Register</title>
+    <style>
+         #loginInContainerDk{
+            background-color: #fffefe;
+            height: 630px;
+            width: 23%;
+            border: 1px solid lightgray;
+            margin: auto;
+            margin-top: 5%;
+            border-radius: 15px;
+            border-bottom-left-radius: 0px;
+            border-bottom-right-radius: 0px;
+        }
+        body{
+            background-color: whitesmoke;
+        }
+        #crossIconLoginDk{
+            margin-left: 4%;
+            margin-top: 5%;
+            opacity: 0.8;
+            display: inline-block;
+        }
+        #logInH_Dk{
+            font-size: 17px;
+            font-family: "Source Sans Pro", sans-serif;
+            font-weight: 500;
+            line-height: 26px;
+            display: inline-block;
+            margin-left: 20%;
+        }
+        #inputLoginDk{
+            margin-left: 3%;
+            height: 43px;
+            width: 90%;
+            /* border-radius: 3px; */
+        }
+        #inputLoginDk::placeholder{
+            text-align: center;
+            font-family: "Source Sans Pro", sans-serif;
+        }
+        #inputLoginContainer{
+            border: 1px solid transparent;
+            width: 90%;
+            height: 55px;
+            margin: auto;
+        }
+        #btnLoginProceedC{
+            border: 1px solid transparent;
+            width: 86%;
+            height: 60px;
+            margin: auto;
+        }
+        #btnLoginProceed{
+            background-color: #003243;
+            color: white;
+            width: 100%;
+            height: 99%;
+            border-radius: 3px;
+            font-size: 14px;
+            font-family: "Source Sans Pro", sans-serif;
+            font-weight: 600;
+            line-height: 24px;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="loginInContainerDk">
+       <i class="fas fa-times fa-2x" id="crossIconLoginDk"></i>
+        <p id="logInH_Dk">LOGIN / REGISTER</p>
+        <hr style="opacity: 0.5; width: 90%;">
+
+        <form action="/users/otpverify" method="post">
+        <div id="inputLoginContainer">
+           
+            <input id="inputLoginDk" type="number" value="" name="mobile" placeholder="Enter Email ID or Phone Number">
+
+        </div>
+
+        <br><br><br><br><br><br><br><br><br>
+
+        <div id="btnLoginProceedC">
+            <!-- <a href="/users/otpverify"><button id="btnLoginProceed">PROCEED</button></a> -->
+            <input onclick="checkNumber()" type="submit" id="btnLoginProceed" value="PROCEED" name="proceed">
+        </div>
+    </form>
+
+    </div>
+
+</body>
+</html>
