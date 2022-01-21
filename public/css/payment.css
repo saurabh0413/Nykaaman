@@ -92,6 +92,14 @@ left: 480px; */
   background-color: rgb(0, 50, 67);
   color: white;
 }
+#rzp-button1{
+  height: 50px;
+  margin-top: 12%;
+  width: 415px;
+  margin-left: 2%;
+  background-color: rgb(0, 50, 67);
+  color: white;
+}
 
 .input {
   display: flex;
