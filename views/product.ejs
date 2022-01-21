@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="/css/slider.css">
     <link rel="stylesheet" href="/css/footer.css">
     <link rel="stylesheet" href="/css/navbar.css">
+    <link rel="stylesheet" href="/css/Cart.css">
 
     <script src="https://kit.fontawesome.com/8d9bddce50.js" crossorigin="anonymous"></script>
     <style>
@@ -1501,87 +1502,85 @@
 <!---cart html-->
 
 <!--cart start-->
-
 <div id="test">
 
    
-  <div id="cart-items">
-      
-    <div id="heading">
-      <span onclick="myFunction()"><i class="fas fa-angle-left fa-2x"></i></span>
-      <span><h2>Shopping Bag</h2></span>
-    </div>
-
-    <div id="hide">
-
-      <div class="V-firstDiv">
-        <input type="checkbox" id="check" checked />
-        <label for=""
-          >Extra 10% OFF on orders above Rs 1000. Use Code NYKAAMAN10.</label
-        >
+    <div id="cart-items">
+        
+      <div id="heading">
+        <span onclick="myFunction()"><i class="fas fa-angle-left fa-2x"></i></span>
+        <span><h2>Shopping Bag</h2></span>
       </div>
-      <div class="V-SecondDiv">
-        <input type="checkbox" id="check" />
-        <label id="reward" for="">2000 Reward Points Rs20</label>
-        <p>Apply</p>
-      </div>
-    </div>
-    <hr>
-    <div id="V-cart-products"></div>
-    <div id="V-total-details">
-        <hr>
-      <h2>Payment Details</h2>
-      <div id="V-total-price">
-        <table>
-          <tbody>
-            <tr>
-              <td class="td1" >Bag Total</td>
-              <td id="total">0</td>
-            </tr>
-            <tr>
-              <td class="td1">Bag Discount</td>
-              <td id="bigDis">0</td>
-            </tr>
-            <tr>
-              <td class="td1">Sub Total</td>
-              <td id="subtotal">0</td>
-            </tr>
-            <tr>
-              <td class="td1">Shipping Charge</td>
-              <td id="shipping">0</td>
-            </tr>
-            <tr>
-              <td class="td1">Grand Total</td>
-              <td id="grand">0</td>
-            </tr>
-          </tbody>
-        </table>
-        <input type="text" name="" id="coupon" placeholder="Have a Coupon ?">
+  <div id="scrollBox">
+  
+  
+      <div id="hide">
+  
+        <div class="V-firstDiv">
+          <input type="checkbox" id="check" checked />
+          <label for=""
+            >Extra 10% OFF on orders above Rs 1000. Use Code NYKAAMAN10.</label
+          >
+        </div>
+        <div class="V-SecondDiv">
+          <input type="checkbox" id="check" />
+          <label id="reward" for="">2000 Reward Points Rs20</label>
+          <p>Apply</p>
+        </div>
       </div>
       <hr>
-      <div>
-          <table id="tble">
-              <tbody>
-                  <tr>
-                      <td>Grand Total</td>
-                  </tr>
-                  <tr><td id="grand_total">0</td></tr>
-
-              </tbody>
+      <div id="V-cart-products"></div>
+      <div id="V-total-details">
+          <hr>
+        <h2>Payment Details</h2>
+        <div id="V-total-price">
+          <table>
+            <tbody>
+              <tr>
+                <td class="td1" >Bag Total</td>
+                <td id="total">0</td>
+              </tr>
+              <tr>
+                <td class="td1">Bag Discount</td>
+                <td id="bigDis">0</td>
+              </tr>
+              <tr>
+                <td class="td1">Sub Total</td>
+                <td id="subtotal">0</td>
+              </tr>
+              <tr>
+                <td class="td1">Shipping Charge</td>
+                <td id="shipping">0</td>
+              </tr>
+              <tr>
+                <td class="td1">Grand Total</td>
+                <td id="grand">0</td>
+              </tr>
+            </tbody>
           </table>
-          <!-- <button id="gotopayment666">PROCEED</button> -->
-
-      </div>
+          <input type="text" name="" id="coupon" placeholder="Have a Coupon ?">
+        </div>
+        <hr>
+        <div>
+  
+        </div>
+            <table id="tble">
+                <tbody>
+                    <tr>
+                        <td>Grand Total</td>
+                    </tr>
+                    <tr><td id="grand_total">0</td></tr>
+  
+                </tbody>
+            </table>
+            <button id="gotopayment666">PROCEED</button>
+        </div>
+    </div>
+    <div>
+    </div>
+  </div>
   </div>
 
-
-  <div>
-
-
-     
-  </div>
-</div>
-</div>
  <!---cart end-->
 
 
@@ -1590,6 +1589,8 @@
 </body>
 </html>
 <script>
+
+
  async function dk() {
         let url = "https://ap-south-1.aws.webhooks.mongodb-realm.com/api/client/v2.0/app/nykaaa-qivwv/service/Nykaaman/incoming_webhook/Nykaaman?secret=saurabh";
         let res = await fetch(url);
@@ -1699,11 +1700,21 @@ containerP.innerHTML = null;
 
    let img = document.createElement("img")
 
-   prod_div.addEventListener("click",()=>{
-    localStorage.setItem("bagdata",JSON.stringify(item))
-    window.location.href= "/unqProduct"
+//    let ab = 1;
+//    if(ab == 1){
+//        let arr = [];
+//        arr.push(item)
+//        localStorage.setItem("bagdata",JSON.stringify(arr))
+//        ab--;
+//    }
 
-   })
+  
+    img.addEventListener("click",()=>{
+        localStorage.setItem("individual",JSON.stringify(item))
+        window.location.href= "/unqProduct"  
+    })
+
+   
    img.setAttribute("src", item.images[0]);
    img.style.height = "250px";
    img.style.width = "250px";
@@ -1774,12 +1785,12 @@ containerP.innerHTML = null;
     btn_div.innerHTML = null;
 
     let btn_addTobag = document.createElement("button");
+
     btn_addTobag.addEventListener("click",function () {    
       var a= JSON.parse(localStorage.getItem("bagdata")) || []
       a.push(item)
       localStorage.setItem("bagdata",JSON.stringify(a))
-
-
+      location.reload()
 
       // hide();
       
@@ -1915,3 +1926,4 @@ document.getElementById("imgSetter").addEventListener("click",()=>{
 
 </script>
 <script src="/js/slider.js"></script>
+<script src="/js/Cart.js"></script>
