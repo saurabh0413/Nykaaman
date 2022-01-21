@@ -78,7 +78,6 @@
         <p id="logInH_Dk">LOGIN / REGISTER</p>
         <hr style="opacity: 0.5; width: 90%;">
 
-        <form action="/users/otpverify" method="post">
         <div id="inputLoginContainer">
            
             <input id="inputLoginDk" type="number" value="" name="mobile" placeholder="Enter Email ID or Phone Number">
@@ -88,12 +87,37 @@
         <br><br><br><br><br><br><br><br><br>
 
         <div id="btnLoginProceedC">
-            <!-- <a href="/users/otpverify"><button id="btnLoginProceed">PROCEED</button></a> -->
-            <input onclick="checkNumber()" type="submit" id="btnLoginProceed" value="PROCEED" name="proceed">
+            <button id="btnLoginProceed">PROCEED</button>
+            <!-- <input type="submit" id="btnLoginProceed" value="PROCEED" name="proceed"> -->
         </div>
-    </form>
+    <!-- </form> -->
 
     </div>
-
 </body>
 </html>
+<script>
+  document.getElementById("crossIconLoginDk").addEventListener("click", () => {
+        window.location = "/users";
+    });
+
+var userAr = JSON.parse(localStorage.getItem("userData")) || [];
+
+let bnt_proceed = document.getElementById("btnLoginProceed");
+
+bnt_proceed.addEventListener("click", () =>{
+    let user_mobile = document.getElementById("inputLoginDk").value;
+
+    if(user_mobile.length !== 10){
+        alert("Please enter 10 digit mobile number");
+    }  else {
+        let userD = {
+        mobile: user_mobile,
+    }
+    userAr.push(userD);
+    localStorage.setItem("userData", JSON.stringify(userAr));
+    window.location = "/users/otpverify";
+    }
+});
+
+
+</script>
