@@ -105,9 +105,30 @@
         <br><br>
 
         <div id="btnLoginOtpC">
-            <a href="/users/checkuser"><button id="btnLoginOtpVerify">VERIFY</button></a>
+            <button id="btnLoginOtpVerify">VERIFY</button>
         </div>
 
     </div>
 </body>
 </html>
+<script>
+
+document.getElementById("crossIconLoginOtpDk").addEventListener("click", () => {
+        window.location = "/users/login";
+    })
+
+    let btn_verify = document.getElementById("btnLoginOtpVerify");
+
+    let user = JSON.parse(localStorage.getItem("userData"));
+    console.log(user);
+
+    btn_verify.addEventListener("click", () =>{
+        let input_otp = document.getElementById("inputLoginOtpDk").value;
+        if(input_otp.length !== 6) {
+        alert("Please enter 6 digit OTP")
+        } else {
+        window.location = "/users/checkuser";
+        }
+        });
+
+</script>

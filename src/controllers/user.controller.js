@@ -5,23 +5,17 @@ const User = require("../models/user.model");
 const router = express.Router();
 
 
-router.post("/otpverify", async (req, res) => {
-    let user;
+router.get("/otpverify", async (req, res) => {
 try {
-    user = await User.create(req.body);
-    console.log(user)
-    return res.status(201).render("loginotp");
+     res.render("loginotp");
 } catch (err) {
     return res.status(500).send(err.message)
 }
 });
 
-router.post("/authdone", async (req, res) => {
+router.get("/authdone", async (req, res) => {
     try {
-         user = await User.create(req.body);
-        console.log(user)
-        return res.status(201).render("index");
-        
+     res.render("index");    
     } catch (err) {
         return res.status(500).send(err.message)
     }
