@@ -1104,6 +1104,8 @@ border-radius: 5px;
         <span onclick="myFunction()"><i class="fas fa-angle-left fa-2x"></i></span>
         <span><h2>Shopping Bag</h2></span>
       </div>
+  <div id="scrollBox">
+  
   
       <div id="hide">
   
@@ -1153,6 +1155,8 @@ border-radius: 5px;
         </div>
         <hr>
         <div>
+  
+        </div>
             <table id="tble">
                 <tbody>
                     <tr>
@@ -1163,19 +1167,12 @@ border-radius: 5px;
                 </tbody>
             </table>
             <button id="gotopayment666">PROCEED</button>
-  
         </div>
     </div>
-  
-  
     <div>
-  
-  
-       
     </div>
   </div>
   </div>
-
   <!--cart html ends-->
 
     <!-- <div id="unq_prod_footerC"></div> -->
@@ -1338,7 +1335,7 @@ border-radius: 5px;
     let unq_detailsDiv = document.getElementById("unq_detailsDiv");
 
 
-    let unq_product = JSON.parse(localStorage.getItem("bagdata"));
+    let unq_product = JSON.parse(localStorage.getItem("individual"));
     // console.log(unq_product);
 
     displayUnqProduct(unq_product);
@@ -1606,3 +1603,4 @@ border-radius: 5px;
 
 
 </script>
+<script src="/js/Cart.js"></script>
