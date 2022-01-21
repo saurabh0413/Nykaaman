@@ -47,6 +47,16 @@ router.get("/unqProduct", async (req, res) => {
 })
 
 
+router.get("/payment", async (req, res) => {
+    try {
+
+        res.render("payment")
+    }
+    catch (err) {
+        res.status(500).send(err.message)
+    }
+})
+
 
 
 
