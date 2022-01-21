@@ -27,6 +27,7 @@ router.get("/unqProduct/:id", async(req, res) => {
   catch(err){
     return res.status(500).send({err:err.message})
   }
-});                                                                     
+}); 
+                                                                    
 
 module.exports = router
