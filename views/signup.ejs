@@ -82,7 +82,6 @@
         <p id="signUpH_Dk">ALMOST THERE!</p>
         <hr style="opacity: 0.5; width: 90%;">
 
-        <form action="/users/authdone" method="post">
         <div id="inputSignUpContainer">
             <input class="inputSignUpDk" name="name" id="fullNameSignup" type="text" placeholder="Full Name">
 
@@ -93,9 +92,8 @@
         <br><br>
 
         <div id="btn_signupC">
-            <input type="submit" name="save" value="SAVE" id="btn_signUpDk">
+            <button id="btn_signUpDk">SAVE</button>
         </div>
-    </form>
    
     </div>
     
@@ -103,39 +101,28 @@
 
 </body>
 </html>
-<script type="text/javascript">
+<script>
 
-let  error = errors;          
-
-if(error!=null) 
-{  
-  showAlert(error.message);
-}
+document.getElementById("crossIconSignUpDk").addEventListener("click", () => {
+        window.location = "/users/login";
+    });
 
 
-// showAlert = function(err) {
-//   alert('error: ' + err);
-//}
-    // document.getElementById("crossIconSignUpDk").addEventListener("click", () => {
-    //     window.location = "login.html";
-    // });
+    let btn_signUp_save = document.getElementById("btn_signUpDk");
 
-
-    // let btn_signUp_save = document.getElementById("btn_signUpDk");
-
-    // let userNE_ar = JSON.parse(localStorage.getItem("UserDetails")) || [];
+    let userNE_ar = JSON.parse(localStorage.getItem("UserDetails")) || [];
    
 
-    // btn_signUp_save.addEventListener("click", () =>{
+    btn_signUp_save.addEventListener("click", () =>{
 
-    //     let userD = {
-    //         name:  document.getElementById("fullNameSignup").value,
-    //         email:  document.getElementById("emailSignup").value,
-    //     }
-    //     userNE_ar.push(userD);
-    //     localStorage.setItem("UserDetails", JSON.stringify(userNE_ar));
+        let userD = {
+            name:  document.getElementById("fullNameSignup").value,
+            email:  document.getElementById("emailSignup").value,
+        }
+        userNE_ar.push(userD);
+        localStorage.setItem("UserDetails", JSON.stringify(userNE_ar));
 
-    //     window.location = "index.html";
-    // });
+        window.location = "/users/authdone";
+    });
 
 </script>
