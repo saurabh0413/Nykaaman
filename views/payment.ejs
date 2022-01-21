@@ -96,7 +96,7 @@
                 <!-- <a href="https://www.nykaaman.com/assets/desktop/images/checkout/bank-card-back-side.png"></a> -->
                 <input type="checkbox" id="check" name="check" value="Bike" />
                 <label for="check">Save this card for Future</label><br />
-                <button id="btn">PAY NOW ></button>
+                <button id="rzp-button1">PAY NOW ></button>
             </div>
 
 
@@ -296,6 +296,45 @@
 
     </div>
 
+    <!-- rzor -->
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script>
+    
+        const price = localStorage.getItem("totalprice")
+        var options = {
+           "key": "rzp_test_eLwrqAde1iXXjF", 
+           "amount": `${+price}`*100, 
+           "currency": "INR",
+           "name": "Nykaman",
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDcJD09Q0m4l05BohZwUtZYJ2tpzmZy2LTXQ&usqp=CAU",
+         
+           "theme": {
+               "color": "#2300a3"
+           },
+           "callback_url":"/sucess"
+       };
+       var razorpayObject = new Razorpay(options);
+       console.log(razorpayObject);
+       razorpayObject.on('payment.failed', function (response){
+             console.log(response);
+             alert("This step of Payment Failed");
+       });
+         
+       document.getElementById('rzp-button1').onclick = function(e){
+           razorpayObject.open();
+           e.preventDefault();
+       }
+    
+       var rzp1 = new Razorpay(options);
+    document.getElementById('rzp-button1').onclick = function(e){
+        rzp1.open();
+        e.preventDefault();
+
+    }
+ 
+
+    </script>
+
 
 </body>
 
@@ -438,14 +477,15 @@
     add.textContent = localStorage.getItem("address")
     add.style.color = "rgb(82,83, 94)";
     add.style.fontSize = "14px";
-    document.getElementById("btn").addEventListener("click", () => {
-        const  cardNum = document.getElementById("box").value;
-        if (cardNum.length !== 16) {
-            document.getElementById("box").style.border = "1px solid red";
-            document.getElementById("error").innerText = "Field is Required*";
-            document.getElementById("error").style.color = "red";
-        } else {
-            window.location.href = "/";
-        }
-    });
+    // document.getElementById("btn").addEventListener("click", () => {
+    //     const  cardNum = document.getElementById("box").value;
+    //     if (cardNum.length !== 16) {
+    //         document.getElementById("box").style.border = "1px solid red";
+    //         document.getElementById("error").innerText = "Field is Required*";
+    //         document.getElementById("error").style.color = "red";
+    //     } else {
+    //         window.location.href = "/";
+    //     }
+    // });
+       localStorage.removeItem("bagdata")
 </script>
