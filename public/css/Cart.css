@@ -103,7 +103,6 @@ label {
   gap: 10px;
 }
 #V-cart-products > div {
-  border: 1px solid red;
   height: 150px;
   background-color: white;
   box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,

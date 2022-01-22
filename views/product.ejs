@@ -1594,19 +1594,22 @@
 
 </body>
 </html>
+
 <script>
+ // window.location.reload();   
 let userarr= JSON.parse(localStorage.getItem("UserDetails"))
 console.log(userarr[0].name)
 document.getElementById("GoToLogin1").innerText = userarr[0].name
- async function dk() {
-        let url = "https://ap-south-1.aws.webhooks.mongodb-realm.com/api/client/v2.0/app/nykaaa-qivwv/service/Nykaaman/incoming_webhook/Nykaaman?secret=saurabh";
-        let res = await fetch(url);
-        let data = await res.json();
-        // console.log(data);
-        localStorage.setItem("allproducts",JSON.stringify(data))
-    }
+//  async function dk() {
+//         let url = "https://ap-south-1.aws.webhooks.mongodb-realm.com/api/client/v2.0/app/nykaaa-qivwv/service/Nykaaman/incoming_webhook/Nykaaman?secret=saurabh";
+//         let res = await fetch(url);
+//         let data = await res.json();
+//         // console.log(data);
+//         localStorage.setItem("allproducts",JSON.stringify(data));
+         
+//     }
 
-    dk();
+//     dk();
 // console.log(product)   
 // import navbar from "./navbar/navbar1.js"
     // document.getElementById("navbar").innerHTML = navbar()
@@ -1706,22 +1709,11 @@ containerP.innerHTML = null;
    p_heading.style.color = "#003243";
 
    let img = document.createElement("img")
-
-//    let ab = 1;
-//    if(ab == 1){
-//        let arr = [];
-//        arr.push(item)
-//        localStorage.setItem("bagdata",JSON.stringify(arr))
-//        ab--;
-//    }
-
-  
     img.addEventListener("click",()=>{
         localStorage.setItem("individual",JSON.stringify(item))
         window.location.href= "/unqProduct"  
     })
 
-   
    img.setAttribute("src", item.images[0]);
    img.style.height = "250px";
    img.style.width = "230px";
@@ -1897,17 +1889,11 @@ for(var b=1; b<a.length; b=b+2) {
             })
             displayProducts(product_data)
         }
-        // console.log(d.value)
     })
-    // console.log(d.checked)
 }
 document.getElementById("GoToLogin").addEventListener("click",()=>{
     window.location.href="account.html"
 })
-// document.getElementById("openCart").addEventListener("click",()=>{
-//     window.location.href="cart.html"
-// })
-
 document.getElementById("openCart").addEventListener("click",()=>{
     // window.location.href="cart.html"
     hide();
@@ -1917,11 +1903,6 @@ function indpage(item) {
     console.log(item)
     localStorage.setItem("product",item)
 }
-
-
-// for(var i=0; i<a.length; i++) {
-//     if(a[i].isChecked==true) console.log(a[i])
-// }
 
 document.getElementById("imgSetter").addEventListener("click",()=>{
   console.log("yes")
