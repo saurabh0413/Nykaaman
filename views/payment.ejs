@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/payment.css">
     <script src="https://kit.fontawesome.com/8d9bddce50.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
     <div id="primediv">
 
@@ -55,61 +56,9 @@
         <h5 id="pay" style="margin-left: 5%;">CHOOSE PAYMENT METHOD</h5>
         <div class="main">
             <div id="logo">
-                <img src="https://epayments-support.ingenico.com/contentAsset/image/cea5be3b-f67e-45d9-9aab-2fc8176e67b3/fileAsset"width="100%" height="50%">
-                <br>
-                <br><br><br><br>    
-                <div id="securepay">
-                
-                    <img id="paypal" src="https://th.bing.com/th/id/OIP._wS92-0bIpahRzpPnNxmOAHaFx?w=200&h=180&c=7&r=0&o=5&dpr=1.25&pid=1.7" width="48%" height="100%">
-                    <img src="https://th.bing.com/th/id/OIP.pBOlHD2_FW30nEEF0rLOQAHaH6?w=167&h=180&c=7&r=0&o=5&dpr=1.25&pid=1.7" width="48%" height="100%"/>
-                </div>
-                </div>
-            <!-- <div id="secdiv">
-                <p>Credit/Debit Card</p>
-                <hr />
-                <p>UPI</p>
-                <hr />
-                <p>GooglePay</p>
-                <hr />
-                <p>Net Banking</p>
-                <hr />
-                <p>Cash on Delivery</p>
-                <hr />
-                <p>Gift Card</p>
-            </div> -->
-            <!-- <div class="thirddiv">
-                <div id="error"></div>
-                <p>Credit/Debit Card</p>
-                <hr id="hori" />
-                <input required type="text" id="box" placeholder="Card Number" />
-
-                <div class="input">
-                    <div class="inputDiv">
-                        <input required type="number" placeholder="MM" />
-                        <input required type="number" placeholder="/ YY" />
-                        <input required type="number" placeholder="CVV" />
-                    </div>
-                    <div>
-                        <div>
-                            <img class="fit-picture"
-                                src="https://www.nykaaman.com/assets/desktop/images/checkout/bank-card-back-side.png"
-                                alt="" />
-                        </div>
-                        <div class="p-section">
-                            <p>Last 3 Digits at the</p>
-                            <p>back of the Card</p>
-                        </div>
-                    </div>
-                </div>
-
-                 <p><input required type="number" id="box" placeholder="MM"><span > <input required type="number" id="box" placeholder="/ YY"></span> <span><input required type="number" id="box" placeholder="CVV"></span></p> -->
-                <!-- <a href="https://www.nykaaman.com/assets/desktop/images/checkout/bank-card-back-side.png"></a> -->
-                <!-- <input type="checkbox" id="check" name="check" value="Bike" />
-                <label for="check">Save this card for Future</label><br />
-            </div>  -->
-            
-
-
+                <img src="https://epayments-support.ingenico.com/contentAsset/image/cea5be3b-f67e-45d9-9aab-2fc8176e67b3/fileAsset"
+                    width="100%" height="50%">
+            </div>
             <div id="pricing">
                 <div id="itemcount">
                     <div>
@@ -159,7 +108,7 @@
                     </div>
                     <div id="ftotal">
                         <p id="totall"><b>302</b></p>
-                        <i id="hide_total_div" class="fas fa-angle-up"></i>
+                        <i id="hide_total_div" style="margin-left: 10%;" class="fas fa-angle-up"></i>
                     </div>
                     <!-- <hr> -->
                 </div>
@@ -309,63 +258,48 @@
     <!-- rzor -->
     <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
     <script>
-    
+
         const price = localStorage.getItem("totalprice")
         var options = {
-           "key": "rzp_test_eLwrqAde1iXXjF", 
-           "amount": `${+price}`*100, 
-           "currency": "INR",
-           "name": "Nykaman",
+            "key": "rzp_test_eLwrqAde1iXXjF",
+            "amount": `${+price}` * 100,
+            "currency": "INR",
+            "name": "Nykaman",
             "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDcJD09Q0m4l05BohZwUtZYJ2tpzmZy2LTXQ&usqp=CAU",
-         
-           "theme": {
-               "color": "#2300a3"
-           },
-           "callback_url":"/sucess"
-       };
-       var razorpayObject = new Razorpay(options);
-       console.log(razorpayObject);
-       razorpayObject.on('payment.failed', function (response){
-             console.log(response);
-             alert("This step of Payment Failed");
-       });
-         
-       document.getElementById('rzp-button1').onclick = function(e){
-           razorpayObject.open();
-           e.preventDefault();
-       }
-    
-       var rzp1 = new Razorpay(options);
-    document.getElementById('rzp-button1').onclick = function(e){
-        rzp1.open();
-        e.preventDefault();
-        
 
-    }
- 
+            "theme": {
+                "color": "#66ccff"
+            },
+            "callback_url": "/sucess"
+        };
+        var razorpayObject = new Razorpay(options);
+        console.log(razorpayObject);
+        razorpayObject.on('payment.failed', function (response) {
+            console.log(response);
+            alert("This step of Payment Failed");
+        });
 
+        document.getElementById('rzp-button1').onclick = function (e) {
+            razorpayObject.open();
+            e.preventDefault();
+        }
+
+        var rzp1 = new Razorpay(options);
+        document.getElementById('rzp-button1').onclick = function (e) {
+            rzp1.open();
+            e.preventDefault();
+
+
+        }
     </script>
-
-
 </body>
-
 </html>
 <script>
     let userEmail = JSON.parse(localStorage.getItem("UserDetails"))
     let email = document.getElementById("email")
-    // email.textContent=localStorage.getItem("UserDetails[UserDetails.length-1].email");
     email.innerText = `${userEmail[userEmail.length - 1].email}`
     email.style.color = "rgb(82,83, 94)";
     email.style.fontSize = "14px"
-
-    // document.getElementById("btn").addEventListener("click", gotopay)
-    // function gotopay() {
-    //     console.log("ok")
-    //     let address = document.getElementById("addo").value
-    //     console.log(address)
-    //     localStorage.setItem("address", address)
-    //     window.open("Payment.html")
-    // }
 
     let cartappend = document.getElementById("cartdata")
 
@@ -375,8 +309,6 @@
 
     function displayitems(data) {
         data.forEach(function (item) {
-
-            console.log("Hey")
             let mdiv = document.createElement("div")
             mdiv.setAttribute("id", "mdiv")
 
@@ -413,32 +345,22 @@
             oldprice.textContent = `₹${item.oldPrice.$numberInt}`
             oldprice.style.textDecoration = "line-through"
             oldprice.style.marginRight = "5px"
-
             let newprice = document.createElement("p")
             newprice.textContent = `₹${item.newprice.$numberInt}`
-
             pricediv.append(oldprice, newprice)
-
             lowerdiv.append(qty, pricediv)
-
-
             div2.append(title, ml, lowerdiv)
-            // let hr=document.createElement("hr")
             mdiv.append(div1, div2)
             mdiv.style.width = "100%"
             cartappend.append(mdiv)
         })
-
     }
-
     let a = JSON.parse(localStorage.getItem("bagdata"))
     let b = a.length
     document.getElementById("itemsinbag").innerHTML = `${b} items in your cart`
 
     var click_edit = 0
     document.getElementById("detailsicon").addEventListener("click", () => {
-
-
         if (click_edit % 2 == 0) {
             let a = document.getElementById("detailsicon")
             a.childNodes[1].innerHTML = "EDIT"
@@ -458,10 +380,7 @@
             document.getElementById("cartdata").style.display = "block"
         }
         click_edit++
-
-
     })
-
     // Grandtotal
     var click_total = 0
     // details change
@@ -481,23 +400,15 @@
         click_total++
     })
     let totalprice = localStorage.getItem("totalprice")
-    document.getElementById("subtotal").textContent = totalprice
-    document.getElementById("totall").textContent = totalprice
+    document.getElementById("subtotal").textContent = `₹${totalprice}`
+    document.getElementById("totall").textContent = `₹${totalprice}`;
+    let discount = localStorage.getItem("discount");
+    document.getElementById("discount").innerText = `₹${discount}`;
 
     let add = document.getElementById("name")
     add.textContent = localStorage.getItem("address")
     add.style.color = "rgb(82,83, 94)";
     add.style.fontSize = "14px";
-    // document.getElementById("btn").addEventListener("click", () => {
-    //     const  cardNum = document.getElementById("box").value;
-    //     if (cardNum.length !== 16) {
-    //         document.getElementById("box").style.border = "1px solid red";
-    //         document.getElementById("error").innerText = "Field is Required*";
-    //         document.getElementById("error").style.color = "red";
-    //     } else {
-    //         window.location.href = "/";
-    //     }
-    // });
-       localStorage.removeItem("bagdata")
-       localStorage.removeItem("totalprice")
+    localStorage.removeItem("bagdata")
+    localStorage.removeItem("totalprice")
 </script>

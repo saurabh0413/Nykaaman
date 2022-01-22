@@ -1,10 +1,6 @@
 document.getElementById("GoToLogin").addEventListener("click",()=>{
     window.location.href="/users"
 })
-// document.getElementById("imgSetter").addEventListener("click",()=>{
-//   console.log("yes")
-//   window.location.href="index.html"
-// })
 function clickedInput()
 {
   document.getElementById("seach-dropdown").style.visibility="visible"
@@ -52,9 +48,6 @@ setInterval(function () {
   }
 }, 2000);
 
-//main slider js end
-
-//first saurabh slider start
 
 let sliderList1 = document.querySelector("#sf-Slider1");
 let items1 = sliderList1.querySelectorAll(".sf-SliderBox1");
@@ -257,11 +250,6 @@ function userShowDown(){
       document.getElementById("accountdropdown").addEventListener("mouseout",()=>{
         document.getElementById("accountdropdown").style.visibility="hidden"
       })
-      // document.getElementById("GoToLogin").addEventListener("mouseleave",()=>{
-      //   document.getElementById("accountdropdown").style.visibility="hidden"
-      // })
-
-
     }
     else{
       userName.innerText="Account"

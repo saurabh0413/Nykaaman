@@ -5,7 +5,6 @@ $(".slider").each(function () {
     var bulletArray = [];
     var currentIndex = 0;
     var timeout;
-  
     function move(newIndex) {
       var animateLeft, slideLeft;
   
@@ -89,6 +88,5 @@ $(".slider").each(function () {
         .appendTo(".slide_buttons");
       bulletArray.push($button);
     });
-  
     advance();
   });

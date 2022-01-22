@@ -123,7 +123,7 @@
                     </div>
                     <div id="ftotal">
                         <p id="totall" style="color: black;"><b>302</b></p>
-                        <i id="hide_total_div" class="fas fa-angle-up"></i>
+                        <i id="hide_total_div" style="margin-left: 10%;" class="fas fa-angle-up"></i>
                     </div>
                     <!-- <hr> -->
                 </div>
@@ -368,7 +368,7 @@
     function displayitems(data) {
         data.forEach(function (item) {
 
-            console.log("Hey")
+            console.log(item)
             let mdiv = document.createElement("div")
             mdiv.setAttribute("id", "mdiv")
 
@@ -402,11 +402,12 @@
             pricediv.setAttribute("id", "pdiv")
 
             let oldprice = document.createElement("p")
-            oldprice.textContent = item.oldPrice.$numberInt
-            oldprice.style.textDecoration = "line-through"
+            oldprice.textContent = `₹${item.oldPrice.$numberInt}`
+            oldprice.style.textDecoration = "line-through";
+            oldprice.style.marginRight = "5%"
 
             let newprice = document.createElement("p")
-            newprice.textContent = item.newprice.$numberInt;
+            newprice.textContent = `₹${item.newprice.$numberInt}`;
 
             pricediv.append(oldprice, newprice)
 
@@ -440,7 +441,7 @@
             console.log(a.childNodes)
 
             // console.log(a.childNodes[3].classList)
-            a.childNodes[3].outerHTML = "<i class=\"fas fa-angle-up\" aria-hidden=\"true\"></i>"
+            a.childNodes[3].outerHTML = '<i class="fas fa-angle-up" aria-hidden="true"></i>';
 
             document.getElementById("cartdata").style.display = "none"
         }
@@ -450,7 +451,7 @@
             console.log(a.childNodes)
 
             // console.log(a.childNodes[3].classList)
-            a.childNodes[3].outerHTML = "<i class=\"fas fa-angle-down\" aria-hidden=\"true\"></i>"
+            a.childNodes[3].outerHTML = '<i class="fas fa-angle-down" aria-hidden="true"></i>'
             document.getElementById("cartdata").style.display = "block"
         }
         click_edit++
@@ -472,14 +473,16 @@
             console.log(a.childNodes)
 
             // console.log(a.childNodes[3].classList)
-            a.childNodes[3].outerHTML = "<i class=\"fas fa-angle-down\" aria-hidden=\"true\"></i>"
+            a.childNodes[3].outerHTML = '<i class="fas fa-angle-down" aria-hidden="true"></i>'
             document.getElementById("totaldiv").style.display = "block"
         }
         click_total++;
     });
 
-    let totalprice = localStorage.getItem("totalprice")
-    document.getElementById("subtotal").textContent = totalprice
-    document.getElementById("totall").textContent = totalprice
+    let discount = localStorage.getItem("discount");
+    document.getElementById("discount").innerText = `₹${discount}`;
+    let totalprice = localStorage.getItem("totalprice");
+    document.getElementById("subtotal").textContent = `₹${totalprice}`;
+    document.getElementById("totall").textContent = `₹${totalprice}`;
 
 </script>
