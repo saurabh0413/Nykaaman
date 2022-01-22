@@ -59,6 +59,10 @@ router.get("/payment", async (req, res) => {
     }
 });
 
+router.get("/",(req,res)=>{
+    res.render("index")
+})
+
 
 
 // This razorpayInstance will be used to
@@ -94,7 +98,9 @@ router.post('/createOrder', (req, res)=>{
 });
 
 router.post("/sucess", (req,res)=>{
-    res.render("index")
+    
+    res.render("index");
+    
 })
 
 

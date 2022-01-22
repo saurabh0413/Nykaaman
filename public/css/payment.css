@@ -3,11 +3,12 @@
 }
 .main {
   display: flex;
-  height: 450px;
+  height: 600px;
   width: 90%;
-  justify-content: space-between;
+  justify-content: space-evenly;
   background-color: rgb(243, 243, 243);
-  margin-top: 10px;
+  /* margin-top: 10px; */
+  margin: auto auto;
   /* border: 2px solid greenyellow; */
 
   /* border:  1px solid black; */
@@ -94,9 +95,8 @@ left: 480px; */
 }
 #rzp-button1{
   height: 50px;
-  margin-top: 12%;
   width: 415px;
-  margin-left: 2%;
+
   background-color: rgb(0, 50, 67);
   color: white;
 }
@@ -159,9 +159,22 @@ left: 480px; */
   /* height: 200px; */
   margin-top: 10px;
   display: flex;
-  max-height: 180px;
+  max-height:30%;
+  width: 100%;
   /* flex-direction: row; */
 }
+#logo{
+  
+  width: 50%;
+  height: 100%;
+}
+#securepay{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 35%;
+}
+
 
 #ftotal {
   display: flex;
@@ -179,7 +192,7 @@ left: 480px; */
 #pricing {
   display: flex;
   flex-direction: column;
-  min-width: 450px;
+  min-width: 400px;
 
 }
 
@@ -215,6 +228,7 @@ left: 480px; */
   display: flex;
   flex-direction: column;
   overflow-y: scroll;
+  min-height: 30%;
 }
 
 .prtext {
@@ -233,7 +247,7 @@ left: 480px; */
 
 #mdiv {
   display: flex;
-  max-height: 250px;
+  max-height: 350px;
   max-width: 300px;
 }
 
@@ -267,6 +281,7 @@ left: 480px; */
   /* margin-top: 10px; */
   margin: auto;
   width: 200px;
+  padding: auto;
   /* margin-top: 20px; */
 
 }
