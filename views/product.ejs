@@ -15,7 +15,8 @@
     <script src="https://kit.fontawesome.com/8d9bddce50.js" crossorigin="anonymous"></script>
     <style>
         body{
-            background-color: rgb(235,235,235);
+            background-color: whitesmoke;
+            font-family: Source Sans Pro, Roboto, Arial, sans-serif;
         }
         #sortby{
             display: flex;
@@ -88,10 +89,14 @@
             position: sticky;
             top: 0; 
             left: 94px;
+            padding-left: 10px;
         }
         #topdiv{
             display: flex;
             justify-content:space-between;
+            width: 92%;
+            margin: auto;
+            margin-left: 7%;
             /* width: 300px; */
             /* align-content: center; */
         }
@@ -102,10 +107,10 @@
         #productsContDk{
             border: 1px solid transparent;
             margin: auto;
-            width: 70%;
+            width: 65%;
             display: grid;
-            grid-template-columns: repeat(3, 30%);
-            gap: 20px;
+            grid-template-columns: repeat(3, 28%);
+            gap: 30px;
         }
         #productChildDiv{
             border: 1px solid transparent;
@@ -151,7 +156,7 @@
             /* border: 1px solid rebeccapurple; */
             margin-top:10px;
             height: 35px;
-            width: 35%;
+            width: 36%;
             margin: auto;
         }
         .fa-star{
@@ -163,7 +168,7 @@
  
         #filterdiv{
             width: 16%;
-            margin-left: 120px;
+            margin-left: 100px;
         }
         #main{
             width: 99%;
@@ -180,7 +185,7 @@
             margin-bottom: 40px;
         }
         #slidos{
-            height: 400px;
+            height: 250px;
         }
         #arrowdiv h4{
             margin-left: 5%;
@@ -207,6 +212,7 @@
         
      #primediv{
        position: relative;
+       background-color: whitesmoke;
      }
   
      #imgSetter{
@@ -687,7 +693,7 @@
             <div class="slide_viewer">
               <div class="slide_group">
                 <div class="slide">
-                  <img src="https://images-static.nykaa.com/uploads/0301ea79-a6f7-4748-bc5c-286b875a9755.jpg?tr=w-1200,cm-pad_resize" >
+                  <img src="https://images-static.nykaa.com/uploads/26cffe49-2331-4ec6-8996-4a4a5b4f4be0.jpg?tr=w-1200,cm-pad_resize" >
                 </div>
                 <div class="slide">
                   <img src="https://images-static.nykaa.com/uploads/2c8d7944-a627-46a6-b966-ac9a051e09bc.jpg?tr=w-1200,cm-pad_resize" >
@@ -792,7 +798,7 @@
         <div id="categ">
 
             <div id="arrowdiv" onclick="changeit(1)">
-                <pre><h4 class="productTexts">Categories    </h4></pre>
+                <pre><h5 class="productTexts">Categories    </h5></pre>
 
                 <div class=img>
                     <img id="down1" src="https://cdn.onlinewebfonts.com/svg/img_69892.png" width="15px" height="10px"/>
@@ -833,7 +839,7 @@
         <div id="categ1">
 
             <div id="arrowdiv" onclick="changeit(2)">
-                <pre><h4 class="productTexts">Brand    </h4></pre>
+                <pre><h5 class="productTexts">Brand    </h5></pre>
 
                 <div class=img>
                     <img id="down1" src="https://cdn.onlinewebfonts.com/svg/img_69892.png" width="15px" height="10px"/>
@@ -870,7 +876,7 @@
         <div id="categ2">
 
             <div id="arrowdiv" onclick="changeit(3)">
-                <pre><h4 class="productTexts">Price    </h4></pre>
+                <pre><h5 class="productTexts">Price    </h5></pre>
 
                 <div class=img>
                     <img id="down1" src="https://cdn.onlinewebfonts.com/svg/img_69892.png" width="15px" height="10px"/>
@@ -920,7 +926,7 @@
         <div id="categ3">
 
             <div id="arrowdiv" onclick="changeit(4)">
-                <pre><h4 class="productTexts">Discount    </h4></pre>
+                <pre><h5 class="productTexts">Discount    </h5></pre>
 
                 <div class=img>
                     <img id="down1" src="https://cdn.onlinewebfonts.com/svg/img_69892.png" width="15px" height="10px"/>
@@ -989,7 +995,7 @@
         <div id="categ4">
 
             <div id="arrowdiv" onclick="changeit(5)">
-                <pre><h4 class="productTexts"> Avg Coustmer Rating   </h4></pre>
+                <pre><h5 class="productTexts">Avg Coustmer Rating   </h5></pre>
 
                 <div class=img>
                     <img id="down1" src="https://cdn.onlinewebfonts.com/svg/img_69892.png" width="15px" height="10px"/>
@@ -1031,7 +1037,7 @@
         <div id="categ6">
 
             <div id="arrowdiv" onclick="changeit(6)">
-                <pre><h4 class="productTexts"> Preferences   </h4></pre>
+                <pre><h5 class="productTexts">Preferences   </h5></pre>
 
                 <div class=img>
                     <img id="down1" src="https://cdn.onlinewebfonts.com/svg/img_69892.png" width="15px" height="10px"/>
@@ -1086,7 +1092,7 @@
         <div id="categ7">
 
             <div id="arrowdiv" onclick="changeit(7)">
-                <pre><h4 class="productTexts"> Concern   </h4></pre>
+                <pre><h5 class="productTexts">Concern   </h5></pre>
 
                 <div class=img>
                     <img id="down1" src="https://cdn.onlinewebfonts.com/svg/img_69892.png" width="15px" height="10px"/>
@@ -1175,7 +1181,7 @@
         <div id="categ8">
 
             <div id="arrowdiv" onclick="changeit(8)">
-                <pre><h4 class="productTexts"> Formulation   </h4></pre>
+                <pre><h5 class="productTexts">Formulation   </h5></pre>
 
                 <div class=img>
                     <img id="down1" src="https://cdn.onlinewebfonts.com/svg/img_69892.png" width="15px" height="10px"/>
@@ -1264,7 +1270,7 @@
         <div id="categ9">
 
             <div id="arrowdiv" onclick="changeit(9)">
-                <pre><h4 class="productTexts"> Ingredient   </h4></pre>
+                <pre><h5 class="productTexts">Ingredient   </h5></pre>
 
                 <div class=img>
                     <img id="down1" src="https://cdn.onlinewebfonts.com/svg/img_69892.png" width="15px" height="10px"/>
@@ -1589,8 +1595,9 @@
 </body>
 </html>
 <script>
-
-
+let userarr= JSON.parse(localStorage.getItem("UserDetails"))
+console.log(userarr[0].name)
+document.getElementById("GoToLogin1").innerText = userarr[0].name
  async function dk() {
         let url = "https://ap-south-1.aws.webhooks.mongodb-realm.com/api/client/v2.0/app/nykaaa-qivwv/service/Nykaaman/incoming_webhook/Nykaaman?secret=saurabh";
         let res = await fetch(url);
@@ -1717,8 +1724,8 @@ containerP.innerHTML = null;
    
    img.setAttribute("src", item.images[0]);
    img.style.height = "250px";
-   img.style.width = "250px";
-   img.style.marginLeft = "25px";
+   img.style.width = "230px";
+   img.style.marginLeft = "20px";
 
    let prod_name = document.createElement("p");
    prod_name.setAttribute("class", "productTexts")
