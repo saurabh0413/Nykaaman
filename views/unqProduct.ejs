@@ -1310,6 +1310,10 @@ border-radius: 5px;
 
 <script>
 
+let userarr= JSON.parse(localStorage.getItem("UserDetails"))
+console.log(userarr[0].name)
+document.getElementById("GoToLogin1").innerText = userarr[0].name
+
     let navbarContainerUnq = document.getElementById("navBArunqProd")
     let unq_prod_footerC = document.getElementById("unq_prod_footerC");
 
