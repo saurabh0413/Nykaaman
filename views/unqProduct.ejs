@@ -1316,25 +1316,9 @@ document.getElementById("GoToLogin1").innerText = userarr[0].name
 
     let navbarContainerUnq = document.getElementById("navBArunqProd")
     let unq_prod_footerC = document.getElementById("unq_prod_footerC");
-
-
-    // import navbar from "./navbar/navbar.js";
-    // navbarContainerUnq.innerHTML = navbar();
-    // import footer from "./footer/footer.js";
-    // unq_prod_footerC.innerHTML = footer();
-
-    //GoTO ACCOUNT PAGE//
-
     document.getElementById("GoToLogin").addEventListener("click",()=>{
     window.location.href="account.html"
     })
-    // document.getElementById("openCart").addEventListener("click",()=>{
-    // window.location.href="cart.html"
-    // })
-
-/////////////////////////////////////////
-
-
     let unq_imgS_Div = document.getElementById("unq_imgDiv");
     let unq_detailsDiv = document.getElementById("unq_detailsDiv");
 
@@ -1591,17 +1575,7 @@ document.getElementById("GoToLogin1").innerText = userarr[0].name
        unq_detailsDiv.append(unq_p_NameDiv,unq_p_ratingDiv,unq_mrpDiv,unq_p_taxesDiv,unq_p_offersDiv,unq_p_btnInpDiv,unq_p_staticParaDiv)
         unq_imgS_Div.append(imgDiv,imgChildDiv)
     }
-
-    // let cart_Ar =  JSON.parse(localStorage.getItem("cartItems")) || [];
-    // //console.log(cart_Ar);
-
-
-    // function  addToCard(item) {
-    //     cart_Ar.push(item);
-    //     localStorage.setItem("cartItems", JSON.stringify(cart_Ar));
-    // }
     document.getElementById("openCart").addEventListener("click",()=>{
-    // window.location.href="cart.html"
     hide();
 })
 
