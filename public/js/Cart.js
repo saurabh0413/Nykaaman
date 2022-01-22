@@ -186,6 +186,7 @@ function deleteItem(event) {
 
 document.getElementById("gotopayment666").addEventListener("click", function () {
     let ff = Math.floor(Math.floor(pr) - Math.floor(0.1 * pr))
+    localStorage.setItem("discount", discount);
     localStorage.setItem("totalprice", ff)
     console.log(ff)
     window.location.href = "/add2"

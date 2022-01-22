@@ -1631,4 +1631,15 @@
 
   <script src="/js/index.js"></script>
   <script src="/js/Cart.js"></script>
+  <script> async function dk() {
+    let url = "https://ap-south-1.aws.webhooks.mongodb-realm.com/api/client/v2.0/app/nykaaa-qivwv/service/Nykaaman/incoming_webhook/Nykaaman?secret=saurabh";
+    let res = await fetch(url);
+    let data = await res.json();
+    // console.log(data);
+    localStorage.setItem("allproducts",JSON.stringify(data));
+     
+}
+
+dk();
+</script>
   <!-- <script src="Cart.js"></script> -->
