@@ -1589,8 +1589,9 @@
 </body>
 </html>
 <script>
-
-
+let userarr= JSON.parse(localStorage.getItem("UserDetails"))
+console.log(userarr[0].name)
+document.getElementById("GoToLogin1").innerText = userarr[0].name
  async function dk() {
         let url = "https://ap-south-1.aws.webhooks.mongodb-realm.com/api/client/v2.0/app/nykaaa-qivwv/service/Nykaaman/incoming_webhook/Nykaaman?secret=saurabh";
         let res = await fetch(url);
