@@ -15,7 +15,9 @@ try {
 
 router.get("/authdone", async (req, res) => {
     try {
-     res.render("index");    
+        let userdata="";
+        let useremail=""
+     res.render("index", {userdata,useremail });    
     } catch (err) {
         return res.status(500).send(err.message)
     }
