@@ -43,17 +43,17 @@ document.getElementById("crossIconSignUpDk").addEventListener("click", () => {
 
 let btn_signUp_save = document.getElementById("btn_signUpDk");
 
-let userNE_ar = JSON.parse(localStorage.getItem("UserDetails")) || [];
+let userNE_ar = JSON.parse(localStorage.getItem("UserDetails")) || ["Account"];
 
 
 btn_signUp_save.addEventListener("click", () =>{
 
     let userD = {
-        name:  document.getElementById("fullNameSignup").value,
+        displayName:  document.getElementById("fullNameSignup").value,
         email:  document.getElementById("emailSignup").value,
     }
-    userNE_ar.push(userD);
-    localStorage.setItem("UserDetails", JSON.stringify(userNE_ar));
+    // userNE_ar.push(userD);
+    localStorage.setItem("UserDetails", JSON.stringify(userD)) || "Account";
 
     window.location = "/users/authdone";
 });

@@ -235,25 +235,25 @@ scrollBtn.addEventListener("click", function () {
   window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
 });
 
-function userShowDown(){
-  let userShow = JSON.parse(localStorage.getItem("UserDetails")) ||[]
-  let userName =  document.getElementById("getn")
-  console.log(userShow)
-    if(userShow.length>0){
-      userName.innerText=`${userShow[userShow.length-1].name}`
-      document.getElementById("GoToLogin").addEventListener("mouseover",()=>{
-        document.getElementById("accountdropdown").style.visibility="visible"
-      })
-      document.getElementById("accountdropdown").addEventListener("mouseover",()=>{
-        document.getElementById("accountdropdown").style.visibility="visible"
-      })
-      document.getElementById("accountdropdown").addEventListener("mouseout",()=>{
-        document.getElementById("accountdropdown").style.visibility="hidden"
-      })
-    }
-    else{
-      userName.innerText="Account"
-    }
+// function userShowDown(){
+//   let userShow = JSON.parse(localStorage.getItem("UserDetails")) ||["Acoount"]
+//   let userName =  document.getElementById("getn")
+//   console.log(userShow)
+//     if(userShow.length>0){
+//       userName.innerText=`${userShow[userShow.length-1].name}`
+//       document.getElementById("GoToLogin").addEventListener("mouseover",()=>{
+//         document.getElementById("accountdropdown").style.visibility="visible"
+//       })
+//       document.getElementById("accountdropdown").addEventListener("mouseover",()=>{
+//         document.getElementById("accountdropdown").style.visibility="visible"
+//       })
+//       document.getElementById("accountdropdown").addEventListener("mouseout",()=>{
+//         document.getElementById("accountdropdown").style.visibility="hidden"
+//       })
+//     }
+//     else{
+//       userName.innerText="Account"
+//     }
 
-}
-userShowDown()
+// }
+// userShowDown()

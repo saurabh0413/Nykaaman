@@ -4,8 +4,10 @@ const express = require("express");
 const router = express.Router();
 const Product = require("../models/product.model")
 
+let userdata="";
+let useremail="";
 router.get("", (req, res) => {
-  return res.render("index");
+  return res.render("index", {userdata,useremail});
 });
 
 router.get("/product", async(req, res) => {

@@ -70,7 +70,15 @@
                     <div id="accountSetup">
                         <img id="GoToLogin" class="imgIcon" src="data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHZpZXdCb3g9IjAgMCAxNzIgMTcyIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9Im5vbnplcm8iIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBzdHJva2UtbGluZWNhcD0iYnV0dCIgc3Ryb2tlLWxpbmVqb2luPSJtaXRlciIgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIiBzdHJva2UtZGFzaGFycmF5PSIiIHN0cm9rZS1kYXNob2Zmc2V0PSIwIiBmb250LWZhbWlseT0ibm9uZSIgZm9udC13ZWlnaHQ9Im5vbmUiIGZvbnQtc2l6ZT0ibm9uZSIgdGV4dC1hbmNob3I9Im5vbmUiIHN0eWxlPSJtaXgtYmxlbmQtbW9kZTogbm9ybWFsIj48cGF0aCBkPSJNMCwxNzJ2LTE3MmgxNzJ2MTcyeiIgZmlsbD0ibm9uZSI+PC9wYXRoPjxnIGZpbGw9IiMwMDAwMDAiPjxwYXRoIGQ9Ik04NiwxNC4zMzMzM2MtMTkuNzI2NTUsMCAtMzUuODMzMzMsMTYuMTA2OCAtMzUuODMzMzMsMzUuODMzMzNjMCwxOS43MjY1MyAxNi4xMDY3OSwzNS44MzMzMyAzNS44MzMzMywzNS44MzMzM2MxOS43MjY1NSwwIDM1LjgzMzMzLC0xNi4xMDY4IDM1LjgzMzMzLC0zNS44MzMzM2MwLC0xOS43MjY1MyAtMTYuMTA2NzksLTM1LjgzMzMzIC0zNS44MzMzMywtMzUuODMzMzN6TTg2LDI1LjA4MzMzYzEzLjkxNjgyLDAgMjUuMDgzMzMsMTEuMTY2NTIgMjUuMDgzMzMsMjUuMDgzMzNjMCwxMy45MTY4MSAtMTEuMTY2NTEsMjUuMDgzMzMgLTI1LjA4MzMzLDI1LjA4MzMzYy0xMy45MTY4MiwwIC0yNS4wODMzMywtMTEuMTY2NTIgLTI1LjA4MzMzLC0yNS4wODMzM2MwLC0xMy45MTY4MSAxMS4xNjY1MSwtMjUuMDgzMzMgMjUuMDgzMzMsLTI1LjA4MzMzek00NC43OTE2NywxMDAuMzMzMzNjLTguODQxODgsMCAtMTYuMTI1LDcuMjgzMTIgLTE2LjEyNSwxNi4xMjV2NC4yOTcyYzAsMTAuNTM4MDkgNi42ODE4OSwxOS45OTA1NCAxNi44NzM4NiwyNi40OTAwN2MxMC4xOTE5Nyw2LjQ5OTUzIDI0LjEzNjgyLDEwLjQyMTA2IDQwLjQ1OTQ3LDEwLjQyMTA2YzE2LjMyMjY1LDAgMzAuMjY3NSwtMy45MjE1MyA0MC40NTk0NywtMTAuNDIxMDZjMTAuMTkxOTcsLTYuNDk5NTMgMTYuODczODYsLTE1Ljk1MTk4IDE2Ljg3Mzg2LC0yNi40OTAwN3YtNC4yOTcyYzAsLTguODQxODggLTcuMjgzMTIsLTE2LjEyNSAtMTYuMTI1LC0xNi4xMjV6TTQ0Ljc5MTY3LDExMS4wODMzM2g4Mi40MTY2N2MzLjAzMzI5LDAgNS4zNzUsMi4zNDE3MSA1LjM3NSw1LjM3NXY0LjI5NzJjMCw1Ljk2Njc0IC0zLjg0MzI2LDEyLjI4NTgzIC0xMS45MDQ3OSwxNy40MjY3NmMtOC4wNjE1Myw1LjE0MDkzIC0yMC4wOTg1Myw4LjczNDM4IC0zNC42Nzg1NSw4LjczNDM4Yy0xNC41ODAwMSwwIC0yNi42MTcwMiwtMy41OTM0NSAtMzQuNjc4NTUsLTguNzM0MzdjLTguMDYxNTMsLTUuMTQwOTMgLTExLjkwNDc5LC0xMS40NjAwMiAtMTEuOTA0NzksLTE3LjQyNjc2di00LjI5NzJjMCwtMy4wMzMyOSAyLjM0MTcxLC01LjM3NSA1LjM3NSwtNS4zNzV6Ij48L3BhdGg+PC9nPjwvZz48L3N2Zz4=" alt="">
                         <span id="GoToLogin1" style="margin-top: 4px;">Account</span>
-        
+                        
+                        <script>
+                        let name = JSON.parse(localStorage.getItem("UserDetails"))
+                        // console.log(name)
+                        document.getElementById("GoToLogin1").innerText = name.displayName
+
+                            </script>
+                          
+
                         <img id="openCart" class="imgIcon" src="data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHZpZXdCb3g9IjAgMCAxNzIgMTcyIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9Im5vbnplcm8iIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBzdHJva2UtbGluZWNhcD0iYnV0dCIgc3Ryb2tlLWxpbmVqb2luPSJtaXRlciIgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIiBzdHJva2UtZGFzaGFycmF5PSIiIHN0cm9rZS1kYXNob2Zmc2V0PSIwIiBmb250LWZhbWlseT0ibm9uZSIgZm9udC13ZWlnaHQ9Im5vbmUiIGZvbnQtc2l6ZT0ibm9uZSIgdGV4dC1hbmNob3I9Im5vbmUiIHN0eWxlPSJtaXgtYmxlbmQtbW9kZTogbm9ybWFsIj48cGF0aCBkPSJNMCwxNzJ2LTE3MmgxNzJ2MTcyeiIgZmlsbD0ibm9uZSI+PC9wYXRoPjxnIGZpbGw9IiMwMDAwMDAiPjxwYXRoIGQ9Ik04NiwxMC43NWMtMTcuNzIwNywwIC0zMi4yNSwxNC41MjkzIC0zMi4yNSwzMi4yNWgtMjEuNWMtMi44NTU0NywwIC01LjIwNzAzLDIuMjI1NTggLTUuMzc1LDUuMDgxMDVsLTUuMzc1LDk2Ljc1Yy0wLjA4Mzk4LDEuNDY5NzMgMC40NjE5MiwyLjkzOTQ2IDEuNDY5NzMsMy45ODkyNmMxLjAwNzgxLDEuMDkxOCAyLjQzNTU0LDEuNjc5NjkgMy45MDUyNywxLjY3OTY5aDExOC4yNWMxLjQ2OTczLDAgMi44OTc0NiwtMC41ODc4OSAzLjkwNTI3LC0xLjY3OTY5YzEuMDA3ODEsLTEuMDQ5OCAxLjU1MzcyLC0yLjUxOTUzIDEuNDY5NzMsLTMuOTg5MjZsLTUuMzc1LC05Ni43NWMtMC4xNjc5NywtMi44NTU0NyAtMi41MTk1MywtNS4wODEwNSAtNS4zNzUsLTUuMDgxMDVoLTIxLjVjMCwtMTcuNzIwNyAtMTQuNTI5MjksLTMyLjI1IC0zMi4yNSwtMzIuMjV6TTg2LDIxLjVjMTEuODQxOCwwIDIxLjUsOS42NTgyMSAyMS41LDIxLjVoLTQzYzAsLTExLjg0MTc5IDkuNjU4MjEsLTIxLjUgMjEuNSwtMjEuNXpNMzcuMzMxMDUsNTMuNzVoMTYuNDE4OTV2MjEuNWgxMC43NXYtMjEuNWg0M3YyMS41aDEwLjc1di0yMS41aDE2LjQxODk1bDQuNzQ1MTEsODZoLTEwNi44MjgxMnoiPjwvcGF0aD48L2c+PC9nPjwvc3ZnPg==" alt="">
                     </div>
                 </div>
@@ -1383,10 +1391,7 @@
 </html>
 
 <script>
- // window.location.reload();   
-let userarr= JSON.parse(localStorage.getItem("UserDetails"))
-console.log(userarr[0].name)
-document.getElementById("GoToLogin1").innerText = userarr[0].name
+
 //  async function dk() {
 //         let url = "https://ap-south-1.aws.webhooks.mongodb-realm.com/api/client/v2.0/app/nykaaa-qivwv/service/Nykaaman/incoming_webhook/Nykaaman?secret=saurabh";
 //         let res = await fetch(url);
