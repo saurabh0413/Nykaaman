@@ -9,6 +9,7 @@ body {
 #cart-items {
   border: 1px solid grey;
   width: 450px;
+  min-height: 675px;
   float: right;
   box-sizing: border-box;
   background-color: #f3f3f3;
