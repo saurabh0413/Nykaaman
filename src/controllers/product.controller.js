@@ -99,9 +99,11 @@ router.post('/createOrder', (req, res)=>{
 
 router.post("/sucess", (req,res)=>{
     
-    res.render("index");
+    res.render("thanks");
     
 })
+
+
 
 
 
