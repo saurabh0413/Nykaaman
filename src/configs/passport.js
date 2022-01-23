@@ -13,12 +13,16 @@ function(request, accessToken, refreshToken, profile, done) {
   return done(null, profile);
 }));
 
+let userdata=null
 passport.serializeUser(function(user, done) {
+  userdata = user._json
   done(null, user);
 });
 
 passport.deserializeUser(function(user, done) {
   done(null, user);
 });
+
+console.log(userdata)
 
 module.exports = passport;

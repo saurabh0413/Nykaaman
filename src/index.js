@@ -42,8 +42,13 @@ app.get( '/auth/google/callback',
   })
 );
 
+
 app.get('/protected', isLoggedIn, (req, res) => {
-  res.render("index");
+
+  console.log(req.user.displayName,req.user.email)
+  let userdata = req.user.displayName
+  let useremail=req.user.email
+  res.render("index", {userdata,useremail});
 });
 
 app.get('/logout', (req, res) => {

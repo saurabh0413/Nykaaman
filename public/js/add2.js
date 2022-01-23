@@ -1,6 +1,6 @@
 let userEmail = JSON.parse(localStorage.getItem("UserDetails"))
 let email = document.getElementById("email");
-email.innerText = `${userEmail[userEmail.length - 1].email}`
+email.innerText = `${userEmail.email}`
 
 email.style.color = "rgb(82,83, 94)";
 email.style.fontSize = "14px";
